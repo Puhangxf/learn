@@ -1,14 +1,13 @@
 ### 设一循环队列Queue,只有头指针front,不设尾指针，另设一个内含元素个数的计数器，试写出相应的入队、出队算法
-//带头节点
+#### 带头节点
+
 public T getLastElement(T x){
     Node<T> q = head;
 	Node<T> p = head.next;
-	//当
 	if(x.equals(p.data)){
 		System.out.print("为第一个头结点,无前驱元素！");
 		return null;
 	}
-	
 	while(!x.equals(p.data)){
 		q = p;
 		p = p.next
@@ -17,7 +16,6 @@ public T getLastElement(T x){
 		return null;
 	 }
 	}
-	
 	return q.data;
 }
 
