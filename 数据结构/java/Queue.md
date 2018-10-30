@@ -1,8 +1,6 @@
 ### 设一循环队列Queue,只有头指针front,不设尾指针，另设一个内含元素个数的计数器，试写出相应的入队、出队算法
 #### 带头节点
 
-		p = p.next
-	 if(p == null){
 
 		 public T getLastElement(T x){
 			Node<T> q = head;
