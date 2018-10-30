@@ -1,26 +1,30 @@
 ### 设一循环队列Queue,只有头指针front,不设尾指针，另设一个内含元素个数的计数器，试写出相应的入队、出队算法
 #### 带头节点
 
-public T getLastElement(T x){
-    Node<T> q = head;
-	Node<T> p = head.next;
-	if(x.equals(p.data)){
-		System.out.print("为第一个头结点,无前驱元素！");
-		return null;
-	}
-	while(!x.equals(p.data)){
-		q = p;
 		p = p.next
 	 if(p == null){
-		System.out.print("不存在！");
-		return null;
-	 }
-	}
-	return q.data;
-}
 
-//不带头结点
-public T getLastElement(T x){
+		 public T getLastElement(T x){
+			Node<T> q = head;
+			Node<T> p = head.next;
+			if(x.equals(p.data)){
+				System.out.print("为第一个头结点,无前驱元素！");
+				return null;
+			}
+			while(!x.equals(p.data)){
+				q = p;
+				p = p.next
+			 if(p == null){
+				System.out.print("不存在！");
+				return null;
+			 }
+			}
+			return q.data;
+		 }
+
+ 
+####不带头结点
+  public T getLastElement(T x){
 	Node<T> q = head;
 	Node<T> p = head.next;
 	
@@ -33,9 +37,10 @@ public T getLastElement(T x){
 	 }
 	
 	return q.data;
-}
-	
-class Queue<T>{
+ }
+ 
+### 队列
+ class Queue<T>{
 	int MaxSize ;
 	int front ;
 	int count;
